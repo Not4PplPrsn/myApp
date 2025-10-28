@@ -31,23 +31,30 @@ export default function TabLayout() {
       backgroundColor: "#2D8627",
       borderTopLeftRadius: 10,
       borderTopRightRadius: 10,
+      animationDelay: 120,
+      animationPlayState: 'waiting',
     }, 
-    tabBarActiveTintColor: Colors.light.tint, tabBarInactiveTintColor: Colors.light.text,
+    tabBarInactiveTintColor: '#ffff'
   }}>
       {/* Only these will show in tabs */}
-      <Tabs.Screen name="index" options={{ title: 'Home',  tabBarIcon: ({ color, size }) => (
+      <Tabs.Screen name="index" options={{ title: 'Welcome',  tabBarIcon: ({ color, size }) => (
       <Ionicons name="home-outline" size={size} color={color} 
       />
     ),
            headerStyle: {
-      backgroundColor:'#ec6f35ff',
-      padding: 5,
-      height: 50,
-      width: 40,
-      alignContent:'center',
-      justifyContent:'center',
+      backgroundColor:'#0000',
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 0,
+      borderWidth: 0,
+      borderColor: '#0000',
+      alignItems: 'center',
+      alignContent: 'center'
 
     },
+        tabBarActiveTintColor: '#e0dd15ff'
 
    
   
@@ -56,9 +63,18 @@ export default function TabLayout() {
       <Ionicons name="calculator" size={22} color={color} />
     ),
            headerStyle: {
-      backgroundColor:'#0d4b09ff',
+      backgroundColor:'#0000',
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 0,
+      borderWidth: 0,
+      borderColor: '#0000',
 
     },
+        tabBarActiveTintColor: '#e06363ff'
+
 
     }} />
 
@@ -66,10 +82,35 @@ export default function TabLayout() {
       <Ionicons name="at" size={size} color={color} />
     ),
            headerStyle: {
-      backgroundColor:'#5521e4ff',
+      backgroundColor:'#0000',
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 0,
+      borderWidth: 0,
+      borderColor: '#0000',
 
     },
+        tabBarActiveTintColor: '#81c8e4ff'
 
+
+    }} />
+      <Tabs.Screen name="Course" options={{ title: 'Courses', tabBarIcon: ({ color, size }) => (
+      <Entypo name="book" size={size} color={color} />
+    ),
+           headerStyle: {
+      backgroundColor:'#0000',
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 0,
+      borderWidth: 0,
+      borderColor: '#0000',
+
+    },
+        tabBarActiveTintColor: '#3dd330ff'
     }} />
       
       {/* Exclude entire directory screens */}

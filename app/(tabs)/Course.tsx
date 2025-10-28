@@ -1,11 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Link } from 'expo-router';
 import { ImageBackground } from 'expo-image';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
 
-
-export default function Calculate() {
+export default function Courses() {
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
