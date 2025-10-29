@@ -19,7 +19,7 @@ export default function TabLayout() {
 
 
   return (
- <Tabs screenOptions={{ headerShown: true,
+ <Tabs screenOptions={{ headerShown: false,
    tabBarStyle:{
       backgroundColor: "#2d8627fa",
       borderTopLeftRadius: 10,
