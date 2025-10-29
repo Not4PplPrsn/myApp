@@ -48,7 +48,7 @@ export default function TabLayout() {
     },
     headerTitleStyle: {
       color: '#045e0bff',
-      fontSize: 30
+      fontSize: 30, marginBottom: 22
     },
         tabBarActiveTintColor: '#e0dd15ff',
         headerTitleAlign: 'center'
@@ -56,8 +56,8 @@ export default function TabLayout() {
    
   
  }} />
-      <Tabs.Screen name="Calculate" options={{ title: 'Calculate', tabBarIcon: ({ color, size }) => (
-      <Ionicons name="calculator" size={22} color={color} />
+       <Tabs.Screen name="Course" options={{ title: 'Courses', tabBarIcon: ({ color, size }) => (
+      <Entypo name="book" size={size} color={color} />
     ),
         headerTransparent: true,
 
@@ -71,13 +71,10 @@ export default function TabLayout() {
       borderColor: '#0000',
 
     },
-        tabBarActiveTintColor: '#e06363ff',
-                headerTitleAlign: 'center'
-
-
+        tabBarActiveTintColor: '#3dd330ff',
+      headerTitleAlign: 'center'
 
     }} />
-
       <Tabs.Screen name="Contact" options={{ title: 'Contacts', tabBarIcon: ({ color, size }) => (
       <Ionicons name="at" size={size} color={color} />
     ),
@@ -100,8 +97,9 @@ export default function TabLayout() {
 
 
     }} />
-      <Tabs.Screen name="Course" options={{ title: 'Courses', tabBarIcon: ({ color, size }) => (
-      <Entypo name="book" size={size} color={color} />
+
+      <Tabs.Screen name="Calculate" options={{ title: 'Calculate', tabBarIcon: ({ color, size }) => (
+      <Ionicons name="calculator" size={22} color={color} />
     ),
         headerTransparent: true,
 
@@ -115,10 +113,15 @@ export default function TabLayout() {
       borderColor: '#0000',
 
     },
-        tabBarActiveTintColor: '#3dd330ff',
-      headerTitleAlign: 'center'
+        tabBarActiveTintColor: '#e06363ff',
+                headerTitleAlign: 'center'
+
+
 
     }} />
+
+
+
       
       {/* Exclude entire directory screens */}
       {EXCLUDED_DIRECTORY_SCREENS.map((screenPath) => (
