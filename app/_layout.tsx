@@ -11,6 +11,10 @@ import Sewing from './6-month/Sewing';
 import ChildMinding from './6-weeks/Child-Minding';
 import Cooking from './6-weeks/Cooking';
 import Gardening from './6-weeks/Gardening';
+import { useRouter } from 'expo-router';
+ import { DrawerItem, DrawerItemList,DrawerView } from '@react-navigation/drawer';
+ import { DrawerContentScrollView } from '@react-navigation/drawer';
+ import { Switch } from 'react-native-gesture-handler';
 
 export type CourseItem = {
   name: string;
@@ -45,28 +49,16 @@ export const unstable_settings = {
 };
 
 export default function RootLayout(props: any) {
-  const [expandedSections, setExpandedSections] = useState({
-    SixMonth: false,
-    SixWeeks: false,
-    tabs:false,
-  });
-
-  const toggleSection = (key: keyof typeof expandedSections) => {
-    setExpandedSections((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
-  };
 
   return (
     <Drawer
     screenOptions={{drawerType: 'front', headerShown: true,
-      drawerStyle: { width: 270,
+      drawerStyle: { width: 300,
         direction: 'ltr',
-        backgroundColor: '#46a023ff',
+        backgroundColor: '#256e09ff',
         paddingTop: 20,
         justifyContent: 'space-between',
-        borderTopEndRadius: 10,
+        borderTopRightRadius: 10,
         animationDirection: 'reverse',
         animationName:'slide-in-right',
         animationFillMode: 'forwards',
@@ -82,53 +74,100 @@ export default function RootLayout(props: any) {
         />
         <Text style= {{fontSize: 15, fontWeight: 'bold', color: '#ffff', fontStyle: 'italic'}}>Empowering SA</Text>
       </View>),
-      headerStyle: { backgroundColor: '#2d8627fa', borderRadius: 7.5, 
+      headerStyle: { backgroundColor: '#2d8627fa', borderBottomLeftRadius: 7.5,
+        height: 102.7, borderBottomRightRadius: 7.5
         
       },
       headerTintColor: '#ffff',
-      drawerActiveTintColor: '#0a5f34ff',
+      drawerActiveTintColor: '#f7625dff',
       drawerInactiveTintColor: '#f8f2f2ff',
+      headerTitleStyle: {
+        padding:100,
+      }
       
       
       
       
-    }}>  
-      <Drawer.Screen
-        name="(tabs)"
-        options={{ drawerLabel: 'Main', 
-          title:'Main'
-          
-          
-         }}
-      />
-      <Drawer.Screen
-        name="6-month/FirstAid"
-        options={{ drawerLabel: 'First Aid' , title: 'First Aid' }}
-      />
-      <Drawer.Screen
-        name="6-month/Sewing"
-        options={{ drawerLabel: 'Sewing', title: 'Sewing' }}
-      />
-      <Drawer.Screen
-        name="6-month/LandScaping"
-        options={{ drawerLabel: 'Land Scaping', title: 'Land Scaping' }} 
-      />
-      <Drawer.Screen
-        name="6-month/LifeSkills"
-        options={{ drawerLabel: 'Life Skills', title: 'Life Skills' }}
-      />
-      <Drawer.Screen
-        name="6-weeks/Gardening"
-        options={{ drawerLabel: 'Gardening', title: 'Gardening' }}
-      />
-      <Drawer.Screen
-        name="6-weeks/Cooking"
-        options={{ drawerLabel: 'Cooking', title: 'Cooking' }}
-      />
-      <Drawer.Screen
-        name="6-weeks/Child-Minding"
-        options={{ drawerLabel: 'Child Minding', title: 'Child Minding' }}
-      />
-    </Drawer>
+      
+      
+    }}
+    drawerContent={() => <CustomDrawerContent/>}/>  
+
     );
+}
+
+export function CustomDrawerContent(){
+
+  const router = useRouter();
+
+  const [items, setItems] = useState([
+    ...SixMonth.map(item => ({ ...item, visible: true })),
+    ...SixWeeks.map(item => ({ ...item, visible: true })),
+  ]);
+  const toggleSection = (key: keyof typeof expandedSections) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
+  const [expandedSections, setExpandedSections] = useState({
+    SixMonth: false,
+    SixWeeks: false,
+   
+  });
+
+
+  
+  return(
+<DrawerContentScrollView>
+<DrawerItem
+  label="Main"
+  labelStyle={{ textAlign: 'right', color: "#ffff" }}
+
+  onPress={() => router.push('/(tabs)')}
+  
+
+  />
+  {/*Tabs button */}
+  {/* Toggle for 6-Month Courses */}
+  <View style={{flexDirection: 'row-reverse'}}>
+    <Text style={{color: "#ffff"}}>6-Month Courses</Text>
+    <Switch
+      value={expandedSections.SixMonth}
+      onValueChange={() => toggleSection('SixMonth')}
+    />
+  </View>
+
+  {expandedSections.SixMonth &&
+    SixMonth.map(item => (
+      <DrawerItem
+        key={item.name}
+        label={item.name}
+         labelStyle={{color: '#ffff'}}
+        onPress={() => router.push(item.path)}
+        
+      />
+    ))}
+
+  {/* Toggle for 6-Week Courses */}
+  <View style={{flexDirection: 'row-reverse'}}>
+    <Text style={{color: "#ffff"}}>6-Week Courses</Text>
+    <Switch
+      value={expandedSections.SixWeeks}
+      onValueChange={() => toggleSection('SixWeeks')}
+    />
+  </View>
+
+  {expandedSections.SixWeeks &&
+    SixWeeks.map(item => (
+      <DrawerItem
+        key={item.name}
+        label={item.name}
+         labelStyle={{color: '#ffff'}}
+
+        onPress={() => router.push(item.path)}
+      />
+    ))}
+</DrawerContentScrollView>
+  );
 }
