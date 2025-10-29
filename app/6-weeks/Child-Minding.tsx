@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
+import { Link } from 'expo-router';
+import { ImageBackground } from 'expo-image';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function ChildMinding() {
   return (
