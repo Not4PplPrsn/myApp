@@ -56,7 +56,8 @@ export default function RootLayout(props: any) {
       drawerStyle: { width: 300,
         direction: 'ltr',
         backgroundColor: '#256e09ff',
-        paddingTop: 20,
+        paddingTop: 5,
+        paddingBottom: 15,
         justifyContent: 'space-between',
         borderTopRightRadius: 10,
         animationDirection: 'reverse',
@@ -75,7 +76,9 @@ export default function RootLayout(props: any) {
         <Text style= {{fontSize: 15, fontWeight: 'bold', color: '#ffff', fontStyle: 'italic'}}>Empowering SA</Text>
       </View>),
       headerStyle: { backgroundColor: '#2d8627fa', borderBottomLeftRadius: 7.5,
-        height: 102.7, borderBottomRightRadius: 7.5
+        height: 89.7, borderBottomRightRadius: 7.5,
+        padding: 15,
+        borderTopEndRadius: 0
         
       },
       headerTintColor: '#ffff',
