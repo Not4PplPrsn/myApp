@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View , Button, TouchableNativeFeedback,ScrollView } from 'react-native';
+import { StyleSheet, Text, View , Button, TouchableNativeFeedback,ScrollView, Animated } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { ImageBackground } from 'expo-image';
 import { useRouter } from 'expo-router';
 import { use } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useRef } from 'react';
 
 
 export default function Information() {
@@ -22,7 +23,7 @@ export default function Information() {
     <View style={styles.container}>
       <LinearGradient
                     colors={['#0a8a30ff', '#043b04ff']}
-              style={StyleSheet.absoluteFill}
+              style={{borderRadius:20}}
               start={{x:1, y:0.2}}
               end={{x:0.5, y:1}}
       
@@ -62,7 +63,27 @@ Costumers who select more then three courses enjoy the maximum discount of 15%.
 
 
 function LinksToTheCourses(){
+  const scaleAnim = useRef(new Animated.Value(7)).current;
+
   const router = useRouter();
+
+  const handlePressIn = () => {
+    Animated.spring(scaleAnim, {
+      toValue: 0.95, // scale down slightly
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const handlePressOut = () => {
+    Animated.spring(scaleAnim, {
+      toValue: 1, // return to original size
+      friction: 10,
+      tension: 60,
+      useNativeDriver: true,
+    }).start();
+  };
+
+
   return(
               <ImageBackground
     source={require('../../assets/images/6MonthCourses.jpg')}
@@ -78,7 +99,10 @@ function LinksToTheCourses(){
 
           <TouchableNativeFeedback
           background={TouchableNativeFeedback.Ripple('#0d50e2ff',true)}
-          onPress={() => router.push('/6-month/FirstAid')}>
+          onPress={() => router.push('/6-month/FirstAid')}
+          onPressIn={handlePressIn}
+        onPressOut={handlePressOut}
+          >
             <View style= {{ borderRadius: 20, width: 190, padding: 6, backgroundColor: "#1143a1e0", margin: 22}}>
               <Text style={{fontSize: 25, flexDirection: 'row', margin: 10, color: '#fff'}}>First Aid</Text>
             </View>
@@ -87,6 +111,9 @@ function LinksToTheCourses(){
           <TouchableNativeFeedback
           background={TouchableNativeFeedback.Ripple('#0e5e2fff',true)}
           onPress={() => router.push('/6-month/LandScaping')}
+                    onPressIn={handlePressIn}
+        onPressOut={handlePressOut}
+
           >
             <View style= {{ borderRadius: 20, width: 190, padding: 6, backgroundColor: "#219146d7" , margin: 22}}>
               <Text style={{fontSize: 25, flexDirection: 'row', margin: 10, color: '#fff'}}>Land Scaping </Text>
@@ -105,7 +132,11 @@ function LinksToTheCourses(){
 
           <TouchableNativeFeedback
           background={TouchableNativeFeedback.Ripple('#de61e2ff',true)}
-          onPress={() => router.push('/6-month/Sewing')}>
+          onPress={() => router.push('/6-month/Sewing')}
+                    onPressIn={handlePressIn}
+        onPressOut={handlePressOut}
+
+          >
             <View style= {{ borderRadius: 20, width: 190, padding: 6, backgroundColor: "#e99e6cf1" , margin: 22}}>
               <Text style={{fontSize: 25, flexDirection: 'row', margin: 10, color: '#fff'}}>Sewing</Text>
             </View>
@@ -119,7 +150,11 @@ function LinksToTheCourses(){
         
           <TouchableNativeFeedback
           background={TouchableNativeFeedback.Ripple('#95e5f3ff',true)}
-          onPress={() => router.push('/6-weeks/Child-Minding')}>
+          onPress={() => router.push('/6-weeks/Child-Minding')}
+                    onPressIn={handlePressIn}
+        onPressOut={handlePressOut}
+
+          >
             <View style= {{ borderRadius: 20, width: 190, padding: 6, backgroundColor: "#c4ec10e3" , margin: 22}}>
               < Text style={{fontSize: 25, flexDirection: 'row', margin: 10, color: '#fff'}}>Child Minding</Text>
             </View>
@@ -128,7 +163,12 @@ function LinksToTheCourses(){
 
           <TouchableNativeFeedback
           background={TouchableNativeFeedback.Ripple('#db541eff',true)}
-          onPress={() => router.push('/6-weeks/Cooking')}>
+          onPress={() => router.push('/6-weeks/Cooking')}
+          onPressIn={handlePressIn}
+        onPressOut={handlePressOut}
+          
+          
+          >
             <View style= {{ borderRadius: 20, width: 190, padding: 6, backgroundColor: "#d63722ec" , margin: 22}}>
               <Text style={{fontSize: 25, flexDirection: 'row', margin: 10, color: '#fff'}} >Cooking</Text>
             </View>
@@ -138,6 +178,9 @@ function LinksToTheCourses(){
           <TouchableNativeFeedback
           background={TouchableNativeFeedback.Ripple('#58ca7aff',true)}
           onPress={() => router.push('/6-weeks/Gardening')}
+            onPressIn={handlePressIn}
+        onPressOut={handlePressOut}
+
           >
             <View style= {{ borderRadius: 20, width: 190, padding: 6, backgroundColor: "#0ed33fe5" , margin: 22}}>
               <Text style={{fontSize: 25, flexDirection: 'row', margin: 10, color: '#fff'}}>Gardening</Text>
