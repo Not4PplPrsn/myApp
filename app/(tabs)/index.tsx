@@ -8,7 +8,7 @@ export default function HomeScreen() {
 
           <ScrollView
         
-      
+      snapToAlignment= {'center'}
       pagingEnabled
       showsHorizontalScrollIndicator={false}
       style={{ flex: 1 }}
@@ -19,17 +19,20 @@ export default function HomeScreen() {
     source={require('../../assets/images/women.jpg')}
     style={styles.background}>
     <View style={styles.container} >
-       <LinearGradient
-        colors={['#0a8a30ff', '#043b04ff']}
+      <LinearGradient
+              colors={['#0a8a30ff', '#043b04ff']}
         style={StyleSheet.absoluteFill}
         start={{x:1, y:0.2}}
         end={{x:0.5, y:1}}
-      />
 
-  
+
+      >
+
+
 
       <Text style={styles.header1}>Testimonial</Text>
       <Text style={styles.text}>Precious Radebe started an initiative to provide skills and training for domestic workers  and gardeners through her business Empower the Nation. They offer both  Six Months and Six Week courses. They also want both a mobile and web page that must  include a Home,  Summary of Six Month and Week Courses, Details of Six Month and Week  courses a separate screen for each course, a page where the user can calculate the total fees  of there selected courses and a contact detail page where the use can see how they can  contact, where to find and where t he business will host events.</Text>
+      </LinearGradient>
     </View></ImageBackground></View>
 
     <View  style={{ width: 'auto' }} >
@@ -37,6 +40,7 @@ export default function HomeScreen() {
       <NextPag/>
 
     </View>
+    
     <View>
       <NextPage/>
     </View>
@@ -51,23 +55,23 @@ export default function HomeScreen() {
       <ImageBackground
       source= {require('../../assets/images/Cooking.jpg')}>
         <View>
-        <View style= {styles.container}>
+        <View style= {styles.container2}>
       <LinearGradient
         colors={['#0a8a30ff', '#043b04ff']}
         style={StyleSheet.absoluteFill}
         start={{x:1, y:0.2}}
         end={{x:0.5, y:1}}
       />
-      <Text>About Empower the Nation</Text>
-<Text>
+      <Text style= {styles.header1}>About Empower the Nation</Text>
+<Text style= {styles.text}>
 At Empower the Nation, we believe that education should be practical, empowering, and accessible to everyone. As a trade school, our focus is on equipping individuals with valuable skills that can open doors to new opportunities, improve daily life, and even kickstart exciting careers.
 We specialize in two types of courses – short-term 6-week programs and more in-depth 6-month programs – giving you the flexibility to choose the learning path that best suits your goals.
 </Text>
 
-<Text>
+<Text style = {styles.header2}>
   Our 6-Week Courses:
 </Text>
-<Text> 
+<Text style= {styles.text}> 
 If you’re looking to gain useful, hands-on knowledge in a short time, our 6-week courses are perfect for you. We offer:
 
 Child Minding – Learn how to care for and understand children, whether for personal growth or professional childcare opportunities.
@@ -93,9 +97,9 @@ Gardening – Strengthen your green thumb as you learn the essentials of growing
         <ImageBackground
         source={require('../../assets/images/Office.jpg')}
         >
-        <View style= { {    justifyContent: 'flex-start'
-}}>
-    <View style = {styles.container2}>
+        <View >
+    <View style = {styles.container3}>
+      
       <LinearGradient
         colors={['#0a8a30ff', '#043b04ff']}
         style={StyleSheet.absoluteFill}
@@ -131,20 +135,20 @@ const styles = StyleSheet.create({
     borderWidth: 0.01,
     alignSelf: 'center',
     lineHeight: 5, 
-    borderRadius: 20,
     margin: 199.75,
-    padding: 10
-    
+    padding: 10,
+    flex: 1,
+    borderRadius: 20
 
   },
   text: {
         fontFamily: 'arial',
 
     zIndex: 1,
-        padding: 5,
+        padding: 4,
         color: '#FFFF', 
         marginStart: 20,
-        margin: 50
+        margin:5
 
   },
    background: {
@@ -154,7 +158,8 @@ const styles = StyleSheet.create({
  header1: {
   color: '#ffff',
   fontSize: 30,
-  fontStyle: 'italic'
+  fontStyle: 'italic',
+  padding: 15
 
  },
   header2: {
@@ -165,8 +170,27 @@ const styles = StyleSheet.create({
 
  },
 
- container2: {
+ container3: {
       position: 'relative',
+    alignItems: 'center',
+    gap: 8,
+    alignContent: 'center',
+    height: 650,
+    width: 320,
+    borderWidth: 0.01,
+    alignSelf: 'center',
+    lineHeight: 5, 
+    borderRadius: 30,
+    marginTop: 199.75,
+    marginEnd: 199.5,
+    padding: 20, 
+    verticalAlign: 'bottom',
+    marginStart: 150,
+    textAlign: 'left'
+
+
+ },container2:{
+        position: 'relative',
     alignItems: 'center',
     gap: 8,
     alignContent: 'center',
@@ -181,9 +205,14 @@ const styles = StyleSheet.create({
     padding: 0.1, 
     verticalAlign: 'bottom',
     marginStart: 150,
-    textAlign: 'left'
+    textAlign: 'left',
+  
+ },
+   gradient: {
+    flex: 1,
+    borderRadius: 12,
+    overflow: 'hidden',
+  },
 
-
- }
 
 });
