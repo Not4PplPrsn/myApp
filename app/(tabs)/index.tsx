@@ -1,41 +1,98 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet, View, Text, ScrollView , Button } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
-import { GestureResponderEvent } from 'react-native';
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
-import { Colors } from '@/constants/theme';
-import { ImageBackground } from 'expo-image';
+import { ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native';
+
 
 export default function HomeScreen() {
   return (
-    <View >
-      <Text>Welcome</Text>
-    </View> 
+          <ImageBackground
+    source={require('../../assets/images/women.jpg')}
+    style={styles.background}>
+      <ScrollView
+      horizontal
+      pagingEnabled
+      showsHorizontalScrollIndicator={false}
+      style={{ flex: 1 }}
+
+>
+    <View style={styles.container} >
+       <LinearGradient
+        colors={['#0a8a30ff', '#043b04ff']}
+        style={StyleSheet.absoluteFill}
+        start={{x:1, y:0.2}}
+        end={{x:0.5, y:1}}
+      />
+
+  
+
+      <Text style={styles.header1}>Testimonial</Text>
+      <Text style={styles.text}>Precious Radebe started an initiative to provide skills and training for domestic workers  and gardeners through her business Empower the Nation. They offer both  Six Months and Six Week courses. They also want both a mobile and web page that must  include a Home,  Summary of Six Month and Week Courses, Details of Six Month and Week  courses a separate screen for each course, a page where the user can calculate the total fees  of there selected courses and a contact detail page where the use can see how they can  contact, where to find and where t he business will host events.</Text>
+    </View>
+
+    <View  style={{ width: 'auto' }} >
+      
+      <NextPag/>
+
+    </View>
+    </ScrollView>
+
+
+    
+    </ImageBackground> 
   );
 }
+   export function NextPag() {
+    return(
+      <ImageBackground
+      source= {require('../../assets/images/Cooking.jpg')}>
+        <View>
+          <LinearGradient
+        colors={['#0a8a30ff', '#043b04ff']}
+        style={StyleSheet.absoluteFill}
+        start={{x:1, y:0.2}}
+        end={{x:0.5, y:1}}
+      />
+        </View>
+      </ImageBackground>
+
+    
+    );
+   }
 
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
+  container: {
+    position: 'relative',
     alignItems: 'center',
     gap: 8,
-    fontFamily: 'georgia'
+    alignContent: 'center',
+    height: 340,
+    width: 320,
+    borderWidth: 0.01,
+    alignSelf: 'center',
+    lineHeight: 5, 
+    borderRadius: 20,
+    margin: 199.75,
+    padding: 10
+    
+
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  text: {
+        fontFamily: 'arial',
+
+    zIndex: 1,
+        padding: 5,
+        color: '#FFFF'
+
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+   background: {
+    flex: 1,
+    resizeMode: 'cover', // or 'contain', 'stretch', etc.
   },
+ header1: {
+  color: '#ffff',
+  fontSize: 30,
+  fontStyle: 'italic'
+
+ }
 });

@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Link } from 'expo-router';
 import { ImageBackground } from 'expo-image';
+import { LinearGradient } from 'expo-linear-gradient';
+
 
 export default function Courses() {
   return (

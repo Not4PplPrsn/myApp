@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { ImageBackground } from 'expo-image';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
+import { LinearGradient } from 'expo-linear-gradient';
+
 
 
 export default function Calculate() {
