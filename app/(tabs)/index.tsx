@@ -21,9 +21,10 @@ export default function HomeScreen() {
     <View style={styles.container} >
       <LinearGradient
               colors={['#0a8a30ff', '#043b04ff']}
-        style={StyleSheet.absoluteFill}
+        style={{borderRadius:20}}
         start={{x:1, y:0.2}}
         end={{x:0.5, y:1}}
+        
 
 
       >
@@ -50,7 +51,7 @@ export default function HomeScreen() {
 
   );
 }
-   export function NextPag() {
+    function NextPag() {
     return(
       <ImageBackground
       source= {require('../../assets/images/Cooking.jpg')}>
@@ -90,7 +91,7 @@ Gardening – Strengthen your green thumb as you learn the essentials of growing
     
     );
    }
-   export function NextPage(){
+ function NextPage(){
 
       return(
         
@@ -130,7 +131,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
     alignContent: 'center',
-    height: 360,
+    height: 500,
     width: 360,
     borderWidth: 0.01,
     alignSelf: 'center',
@@ -138,7 +139,6 @@ const styles = StyleSheet.create({
     margin: 199.75,
     padding: 10,
     flex: 1,
-    borderRadius: 20
 
   },
   text: {
@@ -149,7 +149,8 @@ const styles = StyleSheet.create({
         color: '#FFFF', 
         marginStart: 20,
         margin:5,
-        lineHeight: 20
+        lineHeight: 20, 
+        position: 'fixed',
 
   },
    background: {
@@ -158,14 +159,14 @@ const styles = StyleSheet.create({
   },
  header1: {
   color: '#ffff',
-  fontSize: 30,
+  fontSize: 25,
   fontStyle: 'italic',
-  padding: 15
+  padding: 5
 
  },
   header2: {
   color: '#ffff',
-  fontSize: 16,
+  fontSize: 20,
   fontStyle: 'italic',
   
 
@@ -181,10 +182,9 @@ const styles = StyleSheet.create({
     borderWidth: 0.01,
     alignSelf: 'center',
     lineHeight: 5, 
-    borderRadius: 30,
     marginTop: 99.75,
-    marginEnd: 99.5,
-    padding: 20, 
+    marginEnd: 199.5,
+    padding: 10, 
     verticalAlign: 'bottom',
     marginStart: 150,
     textAlign: 'left'
@@ -199,14 +199,13 @@ const styles = StyleSheet.create({
     width: 320,
     borderWidth: 0.01,
     alignSelf: 'center',
-    lineHeight: 5, 
-    borderRadius: 30,
     marginTop: 199.75,
     marginEnd: 199.5,
     padding: 0.1, 
     verticalAlign: 'bottom',
     marginStart: 150,
     textAlign: 'left',
+    
   
  },
    gradient: {
