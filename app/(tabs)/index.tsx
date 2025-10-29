@@ -130,8 +130,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
     alignContent: 'center',
-    height: 340,
-    width: 320,
+    height: 360,
+    width: 360,
     borderWidth: 0.01,
     alignSelf: 'center',
     lineHeight: 5, 
@@ -148,7 +148,8 @@ const styles = StyleSheet.create({
         padding: 4,
         color: '#FFFF', 
         marginStart: 20,
-        margin:5
+        margin:5,
+        lineHeight: 20
 
   },
    background: {
@@ -181,8 +182,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     lineHeight: 5, 
     borderRadius: 30,
-    marginTop: 199.75,
-    marginEnd: 199.5,
+    marginTop: 99.75,
+    marginEnd: 99.5,
     padding: 20, 
     verticalAlign: 'bottom',
     marginStart: 150,
