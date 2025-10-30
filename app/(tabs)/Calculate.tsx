@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { ImageBackground } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
+import React from 'react';
 
 
 
