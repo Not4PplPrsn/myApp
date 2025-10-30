@@ -59,8 +59,7 @@ export default function HomeScreen() {
         <View style= {styles.container2}>
       <LinearGradient
         colors={['#0a8a30ff', '#043b04ff']}
-        style={StyleSheet.absoluteFill}
-        start={{x:1, y:0.2}}
+style={[StyleSheet.absoluteFill, { borderRadius: 20 }]}        start={{x:1, y:0.2}}
         end={{x:0.5, y:1}}
       />
       <Text style= {styles.header1}>About Empower the Nation</Text>
@@ -103,8 +102,7 @@ Gardening – Strengthen your green thumb as you learn the essentials of growing
       
       <LinearGradient
         colors={['#0a8a30ff', '#043b04ff']}
-        style={StyleSheet.absoluteFill}
-        start={{x:1, y:0.2}}
+style={[StyleSheet.absoluteFill, { borderRadius: 20 }]}        start={{x:1, y:0.2}}
         end={{x:0.5, y:1}}
       />
 
@@ -158,16 +156,19 @@ const styles = StyleSheet.create({
     resizeMode: 'cover', // or 'contain', 'stretch', etc.
   },
  header1: {
-  color: '#ffff',
-  fontSize: 25,
+  color: '#6eb918ff',
+  fontSize: 30,
   fontStyle: 'italic',
-  padding: 5
+  padding: 15,
+  fontWeight: '500',
+  textTransform: 'uppercase'
 
  },
   header2: {
-  color: '#ffff',
+  color: '#6eb918ff',
   fontSize: 20,
   fontStyle: 'italic',
+  fontWeight: '600'
   
 
  },
