@@ -91,7 +91,7 @@ function LinksToTheCourses(){
 
     <View>
 
-      <Text> Courses</Text>
+      <Text style={styles.header1ForPage2}> Courses</Text>
 
       <View style= {{alignItems: 'center', }}>
         <Text style={styles.header2}>Six Months</Text>
@@ -228,10 +228,12 @@ const styles = StyleSheet.create({
     resizeMode: 'cover', // or 'contain', 'stretch', etc.
   },
  header1: {
-  color: '#ffff',
+  color: '#6eb918ff',
   fontSize: 30,
   fontStyle: 'italic',
-  padding: 15
+  padding: 15,
+  fontWeight: '500',
+  textTransform: 'uppercase'
 
  },
   header2: {
@@ -291,6 +293,18 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     overflow: 'hidden',
   },
+   header1ForPage2: {
+  color: '#065c0aff',
+  fontSize: 30,
+  fontStyle: 'italic',
+  padding: 15,
+  backgroundColor: ' #fff',
+      fontWeight: '500',
+  letterSpacing: 16,
+
+}
+
+
 
 
 });
