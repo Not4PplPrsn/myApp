@@ -1,11 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, Image, ImageBackground, Linking, TouchableOpacity } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import {WebView} from 'react-native-webview';
-import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
-import MapView,{Marker} from 'react-native-maps'
-import { PROVIDER_GOOGLE } from 'react-native-maps';
+import { LinearGradient } from 'expo-linear-gradient';
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { Image, ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 
 
