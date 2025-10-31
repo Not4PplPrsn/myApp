@@ -1,16 +1,70 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, FlatList, Button } from 'react-native';
 import { Link } from 'expo-router';
 import { ImageBackground } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useRouter } from 'expo-router';
+import LandScaping from './LandScaping';
+import LifeSkills from './LifeSkills';
+import Sewing from './Sewing';
+import ChildMinding from '../6-weeks/Child-Minding';
+import Cooking from '../6-weeks/Cooking';
+import Gardening from '../6-weeks/Gardening';
+ 
+export type Item = {
+  id: string,
+  course: string,
+  descriptions: string
+
+};
+
+
+
+const router = useRouter();
 
 
 export default function FirstAid() {
   return (
+    <ScrollView>
+
+      <Text>Six Months </Text>
+      <View>
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
+
     </View>
+    </View>
+    
+    <View>
+      <LandScaping/>
+    </View>
+
+    <View>
+      <LifeSkills/>
+    </View>
+    
+    <View>
+      <Sewing/>
+    </View>
+
+    
+    <Text> Six Weeks </Text>
+
+    <View>
+        <ChildMinding/>
+    </View>
+    
+    <View>
+      <Cooking/>
+    </View>
+
+    <View>
+      <Gardening/>
+    </View>
+
+    
+    </ScrollView>
   );
 }
 
@@ -20,15 +74,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
     alignContent: 'center',
-    height: 340,
-    width: 320,
+    height: 700,
+    width: 360,
     borderWidth: 0.01,
     alignSelf: 'center',
     lineHeight: 5, 
     margin: 199.75,
     padding: 10,
     flex: 1,
-    borderRadius: 20
 
   },
   text: {
@@ -38,7 +91,9 @@ const styles = StyleSheet.create({
         padding: 4,
         color: '#FFFF', 
         marginStart: 20,
-        margin:5
+        margin:5,
+        lineHeight: 20, 
+        position: 'fixed',
 
   },
    background: {
@@ -46,16 +101,21 @@ const styles = StyleSheet.create({
     resizeMode: 'cover', // or 'contain', 'stretch', etc.
   },
  header1: {
-  color: '#ffff',
+  color: '#6eb918ff',
   fontSize: 30,
   fontStyle: 'italic',
-  padding: 15
+  padding: 15,
+  fontWeight: '500',
+  textTransform: 'uppercase'
 
  },
   header2: {
-  color: '#ffff',
-  fontSize: 16,
+  color: '#6eb918ff',
+  fontSize: 20,
   fontStyle: 'italic',
+  fontWeight: '600',
+  alignSelf: 'center',
+  padding: 20
   
 
  },
@@ -70,10 +130,9 @@ const styles = StyleSheet.create({
     borderWidth: 0.01,
     alignSelf: 'center',
     lineHeight: 5, 
-    borderRadius: 30,
-    marginTop: 199.75,
-    marginEnd: 199.5,
-    padding: 20, 
+    marginTop: 99.75,
+    marginEnd: 99.5,
+    padding: 10, 
     verticalAlign: 'bottom',
     marginStart: 150,
     textAlign: 'left'
@@ -84,18 +143,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
     alignContent: 'center',
-    height: 650,
+    height: 750,
     width: 320,
     borderWidth: 0.01,
     alignSelf: 'center',
-    lineHeight: 5, 
-    borderRadius: 30,
     marginTop: 199.75,
     marginEnd: 199.5,
     padding: 0.1, 
     verticalAlign: 'bottom',
     marginStart: 150,
     textAlign: 'left',
+    
   
  },
    gradient: {
