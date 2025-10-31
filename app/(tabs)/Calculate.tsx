@@ -56,10 +56,10 @@ export default function Calculate() {
 	<View>
       <Text style={styles.header1}>Logged Courses:</Text>
       {entries.map((entry) => (
-        <View key={entry.id} style={{ marginBottom: 10 }}>
-          <Text>Course: {entry.courseName}</Text>
-          <Text>Duration: {entry.duration}</Text>
-          <Text>Price: R{entry.price}</Text>
+        <View key={entry.id} style={styles.itemsBox}>
+          <Text style={ styles.itemText}>Course: {entry.courseName}</Text>
+          <Text style={ styles.itemText}>Duration: {entry.duration}</Text>
+          <Text style={ styles.itemText}>Price: R{entry.price}</Text>
         </View>
       ))}
     </View>
@@ -159,7 +159,8 @@ const styles = StyleSheet.create({
 				padding: 4,
 				color: '#FFFF', 
 				marginStart: 20,
-				margin:5
+				margin:5,
+				letterSpacing: 5
 
 	},
 	 background: {
@@ -167,17 +168,25 @@ const styles = StyleSheet.create({
 		resizeMode: 'cover', // or 'contain', 'stretch', etc.
 	},
  header1: {
-	color: '#ffff',
-	fontSize: 30,
-	fontStyle: 'italic',
-	padding: 15
+  color: '#6eb918ff',
+  fontSize: 30,
+  fontStyle: 'italic',
+  padding: 15,
+  fontWeight: '500',
+  textTransform: 'uppercase'
 
  },
-	header2: {
-	color: '#ffff',
-	fontSize: 16,
-	fontStyle: 'italic',
-	
+  header2: {
+  color: '#349441ff',
+  fontSize: 24,
+  fontStyle: 'italic',
+  fontWeight: '300',
+  letterSpacing: 11,
+  backgroundColor: "#ffff",
+  marginTop: 35
+  
+  
+  
 
  },
 
@@ -236,7 +245,27 @@ const styles = StyleSheet.create({
 		margin: 2.2,
 		color: '#020202ff'
 
-	}
-
+	},
+	itemsBox:{
+		alignSelf: 'center',
+		alignContent: 'flex-start',
+		justifyContent: 'space-around',
+		borderWidth: 1.5,
+		borderRadius: 12,
+		marginBottom: 12,
+		shadowOpacity: 85,
+		width: 290,
+		height: 95,
+		borderColor: '#e6e5e5ff',
+		padding : 8.5
+	},
+	itemText:{
+		fontSize: 15,
+		color: '#fff',
+		letterSpacing: 0.25,
+		fontWeight:'600',
+		textTransform: 'uppercase'
+		
+	},
 
 });
