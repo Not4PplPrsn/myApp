@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
     alignContent: 'center',
-    height: 500,
+    height: 700,
     width: 360,
     borderWidth: 0.01,
     alignSelf: 'center',
@@ -168,7 +168,9 @@ const styles = StyleSheet.create({
   color: '#6eb918ff',
   fontSize: 20,
   fontStyle: 'italic',
-  fontWeight: '600'
+  fontWeight: '600',
+  alignSelf: 'center',
+  padding: 20
   
 
  },
@@ -184,7 +186,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     lineHeight: 5, 
     marginTop: 99.75,
-    marginEnd: 199.5,
+    marginEnd: 99.5,
     padding: 10, 
     verticalAlign: 'bottom',
     marginStart: 150,
@@ -196,7 +198,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
     alignContent: 'center',
-    height: 650,
+    height: 750,
     width: 320,
     borderWidth: 0.01,
     alignSelf: 'center',
