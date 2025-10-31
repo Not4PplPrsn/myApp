@@ -1,8 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView,TextInput, } from 'react-native';
-import { ImageBackground } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
-import React, {useState} from 'react';
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { ScrollView, StyleSheet, TextInput, View } from 'react-native';
+
+export type Item = {
+  id: string,
+  course: string,
+  descriptions: string
+
+};
+
+
 
 
 
@@ -44,6 +52,46 @@ export default function Calculate() {
 
 			
 			
+
+
+			
+		</View></View>
+		<StatusBar style="auto" />
+		<View>
+			<PaymentInfo/>
+		</View>
+		
+		</ScrollView>
+	);
+}
+
+function PaymentInfo(){
+	return(
+		<View >
+			<LinearGradient
+											colors={['#ebf3ed50', '#d4f190e7']}
+				 style={[StyleSheet.absoluteFill, ]}
+									start={{x:0.2, y:0.51}}
+									end={{x:0.21, y:0.5}}
+
+		
+		/>
+			
+			<View style={styles.container}>
+				
+			<LinearGradient
+							colors={['#8fa596ff', '#3b973ba2']}
+				 style={[StyleSheet.absoluteFill,{ borderRadius: 20} ]}
+				start={{x:1, y:0.2}}
+				end={{x:0.5, y:1}}
+				
+
+
+			/>  
+
+
+			
+			
 			<View>
 					< TextInput placeholder='Enter Your First Name(s)' style= {styles.inputStyling}/>
 					< TextInput placeholder='Enter Your Last Name(s)' style= {styles.inputStyling}/>
@@ -61,41 +109,6 @@ export default function Calculate() {
 
 			
 		</View></View>
-		<StatusBar style="auto" />
-		<View>
-			<PaymentInfo/>
-		</View>
-		
-		</ScrollView>
-	);
-}
-
-function PaymentInfo(){
-	return(
-	<LinearGradient
-	colors={['#ebf3ed50', '#d4f190e7', ]}
-				 
-				
-		start={{ x: 1, y: 0.5 }}
-      end={{ x: 0.5, y: 1 }}									
-		
-		>
-
-		<View style={styles.container}>
-			<LinearGradient
-										colors={['#0a8a30ff', '#043b04ff']}
-						style={[StyleSheet.absoluteFill,{borderRadius:20} ]}
-							start={{x:1, y:2}}
-							end={{x:1, y:3}}
-			/>
-		
-		 
-
-			
-		</View>
-		
-		</LinearGradient>
-
 	);
 }
 
@@ -199,10 +212,12 @@ const styles = StyleSheet.create({
 	inputStyling:{
 		borderRadius:10,
 		borderColor: 'green',
-		backgroundColor: '#ece2e28e',
+		backgroundColor: '#86818142',
 		padding: 10,
 		borderWidth: 1.5,
-		width: 325
+		width: 325,
+		margin: 2.2,
+		color: '#fff'
 
 	}
 
