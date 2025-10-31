@@ -5,14 +5,7 @@ import { ScrollView, StyleSheet, TextInput, View ,Text} from 'react-native';
 import { useState } from 'react';
 import { useEntries } from '@/functions/DataEntries';
 
-export type Item = {
-  id: string,
-  course: string,
-  descriptions: string
 
-};
-
-   const TheCourses = {};
 
 
 
@@ -140,7 +133,7 @@ const styles = StyleSheet.create({
 		alignItems: 'flex-start',
 		gap: 8,
 		alignContent: 'center',
-		height: 500,
+		height: 700,
 		width: 350,
 		borderWidth: 0.01,
 		alignSelf: 'center',
