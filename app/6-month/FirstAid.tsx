@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, FlatList, Button } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, FlatList, Button, Image } from 'react-native';
 import { Link } from 'expo-router';
 import { ImageBackground } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -12,6 +12,8 @@ import Cooking from '../6-weeks/Cooking';
 import Gardening from '../6-weeks/Gardening';
 import { Alert } from 'react-native';
 import { useEntries } from '@/functions/DataEntries';
+import { TouchableOpacity } from 'react-native';
+
 
  
 
@@ -42,40 +44,54 @@ export default function FirstAid() {
     <ScrollView>
 
       
-      <View>
+      <View
+      >
+        <Text
+              style= {styles.infoBar}
+
+        >
+      id: FAID-001,
+      courseName: First Aid,
+      duration: 6 months,
+      price: 1200,
+      </Text>
     <View style={styles.container}>
-      <Text>Course Description</Text>
+<LinearGradient
+  colors={['#0a8a30ff', '#043b04ff']}
+  style={[ StyleSheet.absoluteFillObject,{
+    height: 750,
+    width: 360,
+    borderRadius: 20,
+    alignSelf: 'center',
+    marginVertical: 20,
+  }]}
+  start={{ x: 1, y: 0.2 }}
+  end={{ x: 0.5, y: 1 }}
+/>
+      <Text style={styles.header1}>Course Description</Text>
       <StatusBar style="auto" />
 
     </View>
-    </View>
+<TouchableOpacity
+  onPress={handleAdd}
+  style={{
+    backgroundColor: '#1b91e0ff',
+    borderRadius: 25,
+    width: 171,
+    padding: 10,
+    alignSelf: 'center',
+    marginVertical: 20,
+  }}
+>
+  <Text style={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
+    Add to Calculate
+  </Text>
+</TouchableOpacity>    </View>
     
-    <View>
-      <LandScaping/>
-    </View>
+   
+    
+    
 
-    <View>
-      <LifeSkills/>
-    </View>
-    
-    <View>
-      <Sewing/>
-    </View>
-
-    
-    
-
-    <View>
-        <ChildMinding/>
-    </View>
-    
-    <View>
-      <Cooking/>
-    </View>
-
-    <View>
-      <Gardening/>
-    </View>
 
     
     </ScrollView>
@@ -175,6 +191,24 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     overflow: 'hidden',
   },
+ infoBar: { 
+         
+        
+        color : 'black', 
+      textTransform: 'uppercase', borderRadius: 2.1, 
+       fontWeight: '500',
+        fontSize: 12,
+      margin: 20,
+      padding: 5,width: 150,
+      lineHeight: 20,
+      height: 190,  
+      backgroundColor: '#1b91e0ff',
+      borderWidth: 6
 
+ },
+ infoBox:{ 
+  
+  
+ }
 
 });
