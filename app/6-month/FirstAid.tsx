@@ -69,6 +69,12 @@ export default function FirstAid() {
   end={{ x: 0.5, y: 1 }}
 />
       <Text style={styles.header1}>Course Description</Text>
+
+      <Text style={styles.text}>This course provides first aid awareness and the skills needed to offer basic life support.</Text>
+      <Text>You’ll learn how to manage wounds and bleeding, burns, and fractures, as well as how to handle emergency scenes safely.</Text>
+      <Text>This course provides first aid awareness and the skills needed to offer basic life support.</Text>
+      <Text>You’ll learn how to manage wounds and bleeding, burns, and fractures, as well as how to handle emergency scenes safely.</Text>
+      <Text>The program also covers cardio-pulmonary resuscitation (CPR) and responding to respiratory distress, such as choking or blocked airways, giving you the confidence to act effectively in urgent situations.</Text>
       <StatusBar style="auto" />
 
     </View>
