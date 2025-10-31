@@ -4,19 +4,17 @@ import { Link } from 'expo-router';
 import { ImageBackground } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
-import LandScaping from './LandScaping';
-import LifeSkills from './LifeSkills';
-import Sewing from './Sewing';
-import ChildMinding from '../6-weeks/Child-Minding';
-import Cooking from '../6-weeks/Cooking';
-import Gardening from '../6-weeks/Gardening';
 import { Alert } from 'react-native';
 import { useEntries } from '@/functions/DataEntries';
 import { TouchableOpacity } from 'react-native';
+import { useRoute } from '@react-navigation/native';
+
+import Calculate from '../(tabs)/Calculate';
+import { Ionicons } from '@expo/vector-icons';
 
 
  
-
+const router = useRouter();
 
 
 
@@ -71,13 +69,14 @@ export default function FirstAid() {
       <Text style={styles.header1}>Course Description</Text>
 
       <Text style={styles.text}>This course provides first aid awareness and the skills needed to offer basic life support.</Text>
-      <Text>You’ll learn how to manage wounds and bleeding, burns, and fractures, as well as how to handle emergency scenes safely.</Text>
-      <Text>This course provides first aid awareness and the skills needed to offer basic life support.</Text>
-      <Text>You’ll learn how to manage wounds and bleeding, burns, and fractures, as well as how to handle emergency scenes safely.</Text>
-      <Text>The program also covers cardio-pulmonary resuscitation (CPR) and responding to respiratory distress, such as choking or blocked airways, giving you the confidence to act effectively in urgent situations.</Text>
+      <Text style={styles.text}>You’ll learn how to manage wounds and bleeding, burns, and fractures, as well as how to handle emergency scenes safely.</Text>
+      <Text style={styles.text}>This course provides first aid awareness and the skills needed to offer basic life support.</Text>
+      <Text style={styles.text}>You’ll learn how to manage wounds and bleeding, burns, and fractures, as well as how to handle emergency scenes safely.</Text>
+      <Text style={styles.text}>The program also covers cardio-pulmonary resuscitation (CPR) and responding to respiratory distress, such as choking or blocked airways, giving you the confidence to act effectively in urgent situations.</Text>
       <StatusBar style="auto" />
 
     </View>
+    <View style = { styles.buttonsContainer}>
 <TouchableOpacity
   onPress={handleAdd}
   style={{
@@ -86,13 +85,37 @@ export default function FirstAid() {
     width: 171,
     padding: 10,
     alignSelf: 'center',
-    marginVertical: 20,
+    marginVertical: 30,
   }}
 >
   <Text style={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
-    Add to Calculate
+    <Ionicons name='add-circle'  size={44} color={'#fff'}/>
   </Text>
-</TouchableOpacity>    </View>
+</TouchableOpacity> 
+
+<TouchableOpacity
+  style={{
+    backgroundColor: '#e96937ff',
+    borderRadius: 25,
+    width: 171,
+    padding: 10,
+    alignSelf: 'center',
+    marginVertical: 36,
+    marginInlineStart: 20
+  }}
+  onPress={() => router.back()}
+
+>
+  <View  >
+    <Text style={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
+      <Ionicons name='arrow-back-circle-sharp' size={40} color={'#ffffffff'} /> 
+    </Text>
+  </View>
+</TouchableOpacity>
+</View>
+ 
+
+</View> 
     
    
     
@@ -130,6 +153,7 @@ const styles = StyleSheet.create({
         margin:5,
         lineHeight: 20, 
         position: 'fixed',
+        fontSize: 21
 
   },
    background: {
@@ -147,7 +171,7 @@ const styles = StyleSheet.create({
  },
   header2: {
   color: '#6eb918ff',
-  fontSize: 20,
+  fontSize: 25,
   fontStyle: 'italic',
   fontWeight: '600',
   alignSelf: 'center',
@@ -212,9 +236,19 @@ const styles = StyleSheet.create({
       borderWidth: 6
 
  },
- infoBox:{ 
+ backButton:{ 
+  backgroundColor:'#f0ac2eff', 
+  borderRadius: 20,
+  marginInlineEnd: 10,
+  marginInlineStart:15
   
   
+ },
+ buttonsContainer: { 
+   alignSelf: 'center',
+   flexDirection: 'row',
+   alignItems: 'stretch',
+   alignContent:'space-between'
  }
 
 });

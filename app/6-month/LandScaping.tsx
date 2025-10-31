@@ -3,16 +3,11 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
 import { Alert, Button, StyleSheet, Text, View, ScrollView,  } from 'react-native';
 import { TouchableOpacity } from 'react-native';
+import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 
-export type Item = {
-  id: string,
-  course: string,
-  descriptions: string
-
-};
-
-
+const router = useRouter();
 
 export default function LandScaping() {
 
@@ -57,8 +52,14 @@ export default function LandScaping() {
   start={{ x: 1, y: 0.2 }}
   end={{ x: 0.5, y: 1 }}
 />
-      <Text style={styles.header1}>Course Description</Text>      
+      <Text style={styles.header1}>Course Description</Text>  
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>    
     </View><StatusBar style="auto" />
+    <View style = { styles.buttonsContainer}>
 <TouchableOpacity
   onPress={handleAdd}
   style={{
@@ -67,14 +68,35 @@ export default function LandScaping() {
     width: 171,
     padding: 10,
     alignSelf: 'center',
-    marginVertical: 20,
+    marginVertical: 30,
   }}
 >
   <Text style={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
-    Add to Calculate
+    <Ionicons name='add-circle'  size={44} color={'#fff'}/>
   </Text>
+</TouchableOpacity> 
+
+<TouchableOpacity
+  style={{
+    backgroundColor: '#e96937ff',
+    borderRadius: 25,
+    width: 171,
+    padding: 10,
+    alignSelf: 'center',
+    marginVertical: 36,
+    marginInlineStart: 20
+  }}
+  onPress={() => router.back()}
+
+>
+  <View  >
+    <Text style={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
+      <Ionicons name='arrow-back-circle-sharp' size={40} color={'#ffffffff'} /> 
+    </Text>
+  </View>
 </TouchableOpacity>
-    </View></ScrollView>
+</View>
+     </View></ScrollView>
   );
 }
 
@@ -190,7 +212,14 @@ const styles = StyleSheet.create({
   backgroundColor: '#DB1111',
   borderRadius:25.6,
   width:171.81,
+ },
+  buttonsContainer: { 
+   alignSelf: 'center',
+   flexDirection: 'row',
+   alignItems: 'stretch',
+   alignContent:'space-between'
  }
+
 
 
 });

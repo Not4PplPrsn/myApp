@@ -6,15 +6,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Alert } from 'react-native';
 import { useEntries } from '@/functions/DataEntries';
 import { TouchableOpacity } from 'react-native';
+import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 
+const router = useRouter();
 
-export type Item = {
-  id: string,
-  course: string,
-  descriptions: string
-
-};
 
 
 export default function ChildMinding() {
@@ -46,6 +43,11 @@ export default function ChildMinding() {
       price: 1200,
       </Text>
     <View style={styles.container}>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
 <LinearGradient
   colors={['#0a8a30ff', '#043b04ff']}
   style={[ StyleSheet.absoluteFillObject,{
@@ -62,6 +64,7 @@ export default function ChildMinding() {
       <Text style={styles.header1}>Course Description</Text>
       <StatusBar style="auto" />
     </View>
+    <View style = { styles.buttonsContainer}>
 <TouchableOpacity
   onPress={handleAdd}
   style={{
@@ -70,14 +73,36 @@ export default function ChildMinding() {
     width: 171,
     padding: 10,
     alignSelf: 'center',
-    marginVertical: 20,
+    marginVertical: 30,
   }}
+  
 >
   <Text style={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
-    Add to Calculate
+    <Ionicons name='add-circle'  size={44} color={'#fff'}/>
   </Text>
-</TouchableOpacity>    
+</TouchableOpacity> 
+
+<TouchableOpacity
+  style={{
+    backgroundColor: '#e96937ff',
+    borderRadius: 25,
+    width: 171,
+    padding: 10,
+    alignSelf: 'center',
+    marginVertical: 36,
+    marginInlineStart: 20
+  }}
+  onPress={() => router.back()}
+
+>
+  <View  >
+    <Text style={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
+      <Ionicons name='arrow-back-circle-sharp' size={40} color={'#ffffffff'} /> 
+    </Text>
+  </View>
+</TouchableOpacity>
 </View>
+ </View>
   );
 }
 
@@ -189,6 +214,13 @@ const styles = StyleSheet.create({
       borderWidth: 6
 
  },
+  buttonsContainer: { 
+   alignSelf: 'center',
+   flexDirection: 'row',
+   alignItems: 'stretch',
+   alignContent:'space-between'
+ }
+
 
 
 });

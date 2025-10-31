@@ -6,14 +6,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Alert } from 'react-native';
 import { useEntries } from '@/functions/DataEntries';
 import { TouchableOpacity } from 'react-native';
+import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 
-export type Item = {
-  id: string,
-  course: string,
-  descriptions: string
+const router = useRouter();
 
-};
 
 
 export default function LifeSkills() {
@@ -27,7 +25,7 @@ export default function LifeSkills() {
 
     const newEntry = {
       id: 'LS-003',
-      courseName: 'Mathematics',
+      courseName: 'Life Skills',
       duration: '6 months',
       price: 1200,
     };
@@ -60,8 +58,16 @@ export default function LifeSkills() {
   start={{ x: 1, y: 0.2 }}
   end={{ x: 0.5, y: 1 }}
 />
-<Text style={styles.header1}>Course Description</Text>      <StatusBar style="auto" />
+<Text style={styles.header1}>Course Description</Text> 
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+
+     <StatusBar style="auto" />
     </View>
+    <View style = { styles.buttonsContainer}>
 <TouchableOpacity
   onPress={handleAdd}
   style={{
@@ -70,13 +76,35 @@ export default function LifeSkills() {
     width: 171,
     padding: 10,
     alignSelf: 'center',
-    marginVertical: 20,
+    marginVertical: 30,
   }}
 >
   <Text style={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
-    Add to Calculate
+    <Ionicons name='add-circle'  size={44} color={'#fff'}/>
   </Text>
-</TouchableOpacity>    </View></ScrollView>
+</TouchableOpacity> 
+
+<TouchableOpacity
+  style={{
+    backgroundColor: '#e96937ff',
+    borderRadius: 25,
+    width: 171,
+    padding: 10,
+    alignSelf: 'center',
+    marginVertical: 36,
+    marginInlineStart: 20
+  }}
+  onPress={() => router.back()}
+
+>
+  <View  >
+    <Text style={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
+      <Ionicons name='arrow-back-circle-sharp' size={40} color={'#ffffffff'} /> 
+    </Text>
+  </View>
+</TouchableOpacity>
+</View>
+     </View></ScrollView>
   );
 }
 
@@ -188,6 +216,12 @@ const styles = StyleSheet.create({
       borderWidth: 6
 
  },
+ buttonsContainer: { 
+   alignSelf: 'center',
+   flexDirection: 'row',
+   alignItems: 'stretch',
+   alignContent:'space-between'
+ }
 
 
 });
