@@ -1,7 +1,9 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { ScrollView, StyleSheet, TextInput, View ,Text} from 'react-native';
+import { useState } from 'react';
+import { useEntries } from '@/functions/DataEntries';
 
 export type Item = {
   id: string,
@@ -10,13 +12,15 @@ export type Item = {
 
 };
 
-
+   const TheCourses = {};
 
 
 
 
 
 export default function Calculate() {
+	const entries = useEntries((state) => state.entries);
+
 	return (
 
 					<ScrollView
@@ -37,7 +41,7 @@ export default function Calculate() {
 		
 		/>
 			
-			<View style={styles.container}>
+			<View style={styles.container2}>
 				
 			<LinearGradient
 							colors={['#0a8a30ff', '#043b04ff']}
@@ -48,6 +52,17 @@ export default function Calculate() {
 
 
 			/>  
+			
+	<View>
+      <Text style={styles.header1}>Logged Courses:</Text>
+      {entries.map((entry) => (
+        <View key={entry.id} style={{ marginBottom: 10 }}>
+          <Text>Course: {entry.courseName}</Text>
+          <Text>Duration: {entry.duration}</Text>
+          <Text>Price: R{entry.price}</Text>
+        </View>
+      ))}
+    </View>
 
 
 			
@@ -67,23 +82,23 @@ export default function Calculate() {
 
 function PaymentInfo(){
 	return(
-		<View >
+	<View >
 			<LinearGradient
 											colors={['#ebf3ed50', '#d4f190e7']}
 				 style={[StyleSheet.absoluteFill, ]}
-									start={{x:0.2, y:0.51}}
-									end={{x:0.21, y:0.5}}
+									end={{x:0.2, y:0.51}}
+									start={{x:0.21, y:0.5}}
 
 		
 		/>
 			
-			<View style={styles.container}>
+		<View style={styles.container}>
 				
 			<LinearGradient
-							colors={['#8fa596ff', '#3b973ba2']}
+							colors={[ '#ffffffff', '#fdfdfdff']}
 				 style={[StyleSheet.absoluteFill,{ borderRadius: 20} ]}
-				start={{x:1, y:0.2}}
-				end={{x:0.5, y:1}}
+			end={{x:1, y:0.5}}
+				start={{x:0.2, y:0.2}}
 				
 
 
@@ -108,7 +123,9 @@ function PaymentInfo(){
 
 
 			
-		</View></View>
+		</View>
+		
+	</View>
 	);
 }
 
@@ -187,20 +204,20 @@ const styles = StyleSheet.create({
  container2:{
 				position: 'relative',
 		alignItems: 'center',
-		gap: 8,
+		
 		alignContent: 'center',
 		height: 650,
-		width: 320,
+		width: 350,
 		borderWidth: 0.01,
 		alignSelf: 'center',
 		lineHeight: 5, 
 		borderRadius: 30,
-		marginTop: 199.75,
-		marginEnd: 199.5,
+		
 		padding: 0.1, 
 		verticalAlign: 'bottom',
 		marginStart: 150,
 		textAlign: 'left',
+		margin: 172.5
 	
  },
 	 gradient: {
@@ -211,13 +228,13 @@ const styles = StyleSheet.create({
 
 	inputStyling:{
 		borderRadius:10,
-		borderColor: 'green',
-		backgroundColor: '#86818142',
+		borderColor: '#d2dacbd0',
+		backgroundColor: '#ece7e742',
 		padding: 10,
 		borderWidth: 1.5,
 		width: 325,
 		margin: 2.2,
-		color: '#fff'
+		color: '#020202ff'
 
 	}
 
