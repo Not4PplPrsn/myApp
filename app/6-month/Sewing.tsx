@@ -1,8 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Button } from 'react-native';
 import { Link } from 'expo-router';
 import { ImageBackground } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Alert } from 'react-native';
+import { useEntries } from '@/functions/DataEntries';
+
+
 
 export type Item = {
   id: string,
@@ -14,9 +18,27 @@ export type Item = {
 
 
 export default function Sewing() {
+    const { entries, addEntry } = useEntries();
+
+  const handleAdd = () => {
+    if (entries.length >= 6) {
+      Alert.alert('Limit reached', 'You can only add up to 6 courses.');
+      return;
+    }
+
+    const newEntry = {
+      id: ' SWNG-004',
+      courseName: 'Sewing',
+      duration: '6 months',
+      price: 1200,
+    };
+    addEntry(newEntry);
+  };
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <View>
+        <Text>Course Description</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );

@@ -1,8 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import { Link } from 'expo-router';
 import { ImageBackground } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Alert } from 'react-native';
+import { useEntries } from '@/functions/DataEntries';
 
 export type Item = {
   id: string,
@@ -14,9 +16,29 @@ export type Item = {
 
 
 export default function Gardening() {
+    const addEntry = useEntries((state) => state.addEntry);
+
+  const handleAdd = () => {
+    const newEntry = {
+      id: 'GRDN-007',
+      courseName: 'Mathematics',
+      duration: '6 weeks',
+      price: 1200,
+    };
+    addEntry(newEntry);
+  };
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <View>
+        
+      id: 'GRDN-007',
+      courseName: 'Mathematics',
+      duration: '6 weeks',
+      price: 1200,
+      </View>
+
+      <Text>Course Description</Text>
       <StatusBar style="auto" />
     </View>
   );

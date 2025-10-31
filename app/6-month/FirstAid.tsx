@@ -10,27 +10,41 @@ import Sewing from './Sewing';
 import ChildMinding from '../6-weeks/Child-Minding';
 import Cooking from '../6-weeks/Cooking';
 import Gardening from '../6-weeks/Gardening';
+import { Alert } from 'react-native';
+import { useEntries } from '@/functions/DataEntries';
+
  
-export type Item = {
-  id: string,
-  course: string,
-  descriptions: string
-
-};
 
 
 
-const router = useRouter();
+
 
 
 export default function FirstAid() {
-  return (
+  const { entries, addEntry } = useEntries();
+
+  const handleAdd = () => {
+    if (entries.length >= 6) {
+      Alert.alert('Limit reached', 'You can only add up to 6 courses.');
+      return;
+    }
+
+    const newEntry = {
+      id: 'FAID-001',
+      courseName: 'First Aid',
+      duration: '6 months',
+      price: 1200,
+    };
+    addEntry(newEntry);
+  };
+  return(
+
     <ScrollView>
 
-      <Text>Six Months </Text>
+      
       <View>
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>Course Description</Text>
       <StatusBar style="auto" />
 
     </View>
@@ -49,7 +63,7 @@ export default function FirstAid() {
     </View>
 
     
-    <Text> Six Weeks </Text>
+    
 
     <View>
         <ChildMinding/>
