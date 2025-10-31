@@ -65,7 +65,8 @@ Costumers who select more then three courses enjoy the maximum discount of 15%.
 function LinksToTheCourses(){
   const scaleAnim = useRef(new Animated.Value(7)).current;
 
-  const router = useRouter();
+  const router = useRouter();// for navigation to the separate course screens
+  
 
   const handlePressIn = () => {
     Animated.spring(scaleAnim, {
