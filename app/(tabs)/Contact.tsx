@@ -111,7 +111,7 @@ function OtherVenues(){
       
       <View style= { styles.mapsScreens}>
     <TouchableOpacity
-    activeOpacity={1.7} 
+    activeOpacity={0.7} 
     onPress={()=>Linking.openURL('https://maps.app.goo.gl/8vZDUscJRTcUehgJ9')}
     >
 
