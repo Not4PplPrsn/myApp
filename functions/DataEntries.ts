@@ -10,6 +10,8 @@ type CourseEntry = {
 type EntryStore = {
   entries: CourseEntry[];
   addEntry: (entry: CourseEntry) => void;//These are meant to store the item names an attributes 
+  removeEntry: (id: string) => void;// Will also stor the id of the course
+  getTotal: (price: number) => void ; // will store the toi
 };
 
 export const useEntries = create<EntryStore>((set, get) /*This is how the datat is transfered to the calculate screen  */=> ({
@@ -28,4 +30,22 @@ export const useEntries = create<EntryStore>((set, get) /*This is how the datat 
 
     set({ entries: [...currentEntries, entry] })/*This is the package for he next screen  */;
   },
+    removeEntry: (id:any) => {
+    const currentEntries = get().entries;
+    const updatedEntries = currentEntries.filter(entry => entry.id !== id);
+    set({ entries: updatedEntries });
+  },
+    getTotal: () => {
+    const entries = get().entries;
+    const total = entries.reduce((sum, entry) => sum + entry.price, 0);
+
+    let discount = 0;
+    if (entries.length >= 2) discount = 0.05;
+    if (entries.length === 3) discount = 0.10;
+    if (entries.length > 3) discount = 0.15;
+
+    return total - total * discount;
+  },
+
+  
 }));
