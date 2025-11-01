@@ -131,6 +131,7 @@ const styles = StyleSheet.create({
         margin:5,
         lineHeight: 20, 
         position: 'fixed',
+        fontSize: 21
 
   },
    background: {
@@ -148,7 +149,7 @@ const styles = StyleSheet.create({
  },
   header2: {
   color: '#6eb918ff',
-  fontSize: 20,
+  fontSize: 25,
   fontStyle: 'italic',
   fontWeight: '600',
   alignSelf: 'center',
@@ -198,8 +199,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     overflow: 'hidden',
   },
-
-   infoBar: { 
+ infoBar: { 
          
         
         color : 'black', 
@@ -211,16 +211,22 @@ const styles = StyleSheet.create({
       lineHeight: 20,
       height: 190,  
       backgroundColor: '#1b91e0ff',
-      borderWidth: 0.2
+      borderWidth: 6
 
  },
-  buttonsContainer: { 
+ backButton:{ 
+  backgroundColor:'#f0ac2eff', 
+  borderRadius: 20,
+  marginInlineEnd: 10,
+  marginInlineStart:15
+  
+  
+ },
+ buttonsContainer: { 
    alignSelf: 'center',
    flexDirection: 'row',
    alignItems: 'stretch',
    alignContent:'space-between'
  }
-
-
 
 });

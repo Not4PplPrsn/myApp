@@ -32,6 +32,7 @@ export default function ChildMinding() {
     addEntry(newEntry);
   };
   return (
+    <ScrollView>
     <View>
       <Text
             style= {styles.infoBar}
@@ -102,7 +103,7 @@ export default function ChildMinding() {
   </View>
 </TouchableOpacity>
 </View>
- </View>
+ </View></ScrollView>
   );
 }
 
