@@ -1,9 +1,10 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { ScrollView, StyleSheet, TextInput, View ,Text} from 'react-native';
+import { ScrollView, StyleSheet, TextInput, View ,Text, TouchableOpacity} from 'react-native';
 import { useState } from 'react';
 import { useEntries } from '@/functions/DataEntries';
+import { MaterialIcons } from '@expo/vector-icons';
 
 
 
@@ -13,15 +14,22 @@ import { useEntries } from '@/functions/DataEntries';
 
 export default function Calculate() {
 	const entries = useEntries((state) => state.entries);
+	  
+	const removeEntry = useEntries(state => state.removeEntry);
+	const getTotal = useEntries(state => state.getTotal)
+	 const [total, setTotal] = useState<number | null>(null); // store total here
+
+	   const handleCalculate = () => {
+	const total = getTotal;
+	setTotal(total); };
+
+
+
 
 	return (
 
 					<ScrollView
-				
-			snapToAlignment= {'center'}
-			pagingEnabled
-			showsHorizontalScrollIndicator={false}
-			style={{ flex: 1 }}
+	
 
 >
 		<View >
@@ -34,7 +42,7 @@ export default function Calculate() {
 		
 		/>
 			
-			<View style={styles.container2}>
+		<View style={styles.container2}>
 				
 			<LinearGradient
 							colors={['#0a8a30ff', '#043b04ff']}
@@ -46,13 +54,25 @@ export default function Calculate() {
 
 			/>  
 			
-	<View>
+	<View >
       <Text style={styles.header1}>Logged Courses:</Text>
       {entries.map((entry) => (
+		
         <View key={entry.id} style={styles.itemsBox}>
+			<Text style={ styles.itemText}> Course Id: {entry.id}</Text>
           <Text style={ styles.itemText}>Course: {entry.courseName}</Text>
           <Text style={ styles.itemText}>Duration: {entry.duration}</Text>
           <Text style={ styles.itemText}>Price: R{entry.price}</Text>
+
+		  <TouchableOpacity style={{
+			alignSelf: 'flex-end',
+			justifyContent: 'space-between',
+			margin : 2
+			
+		  }}
+		  onPress= {() => removeEntry(entry.id)}>
+			<MaterialIcons name='remove-circle' size={26.5} color={'#df3308ff'}/>
+		  </TouchableOpacity>
         </View>
       ))}
     </View>
@@ -63,7 +83,67 @@ export default function Calculate() {
 
 
 			
-		</View></View>
+		</View >
+		
+			 <View style= {{ flexDirection: 'row', width: 600}}> 
+			  
+	
+	  				
+
+<View >
+	<TouchableOpacity onPress={handleCalculate} 
+	style= {{ height:35, padding: 5, margin: 2, width:160,}}>
+		<LinearGradient
+							colors={['#0a8a30ff', '#043b04ff']}
+				 style={[StyleSheet.absoluteFill,{ borderRadius: 10} ]}
+				start={{x:1, y:0.2}}
+				end={{x:0.5, y:1}}
+				
+
+
+			/>  
+
+        <Text style={{fontSize: 19, alignSelf: 'center', color: '#ffff'}} >Calculate Total:</Text>
+      </TouchableOpacity>
+		</View> 
+
+		<View style= {{ margin: 5, borderWidth: 0.48, borderRadius: 10, padding: 5
+
+		}}>
+			<Text style= {{fontSize:14, color: 'red', }}>With Discount!!</Text>
+			<Text style= {{fontSize:14, color: 'red', }}>2 Course = 5%</Text>
+			<Text style= {{fontSize:14, color: 'red', }}>3 Courses = 10%</Text>
+			<Text style= {{fontSize:14, color: 'red', }}>More than 3 Courses= 15% </Text>
+		</View>
+
+	
+			</View>
+		<View style= { {width:120, height: 40, alignSelf: 'flex-start',  margin:10, padding: 2  }} >
+			<LinearGradient
+							colors={['#0a8a30ff', '#043b04ff']}
+				 style={[StyleSheet.absoluteFill,{ borderRadius: 5} ]}
+				start={{x:1, y:0.2}}
+				end={{x:0.5, y:1}}
+				
+
+
+			/>
+
+	{total !== null && (
+        <View>
+						
+						
+
+          
+          <Text  style= {{fontSize: 20 , color : '#ffff', paddingTop: 10}}>R{total.toFixed(2)}</Text>
+        </View>
+      )}
+		
+	</View>
+
+
+
+	  	</View>
 		<StatusBar style="auto" />
 		<View>
 			<PaymentInfo/>
@@ -188,7 +268,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		gap: 8,
 		alignContent: 'center',
-		height: 650,
+		height: 1050,
 		width: 320,
 		borderWidth: 0.01,
 		alignSelf: 'center',
@@ -208,7 +288,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		
 		alignContent: 'center',
-		height: 650,
+		height: 750,
 		width: 350,
 		borderWidth: 0.01,
 		alignSelf: 'center',
@@ -219,7 +299,8 @@ const styles = StyleSheet.create({
 		verticalAlign: 'bottom',
 		marginStart: 150,
 		textAlign: 'left',
-		margin: 172.5
+		margin: 172.5,
+		marginBottom: 10
 	
  },
 	 gradient: {
@@ -245,15 +326,15 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-around',
 		borderWidth: 1.5,
 		borderRadius: 12,
-		marginBottom: 12,
+		marginBottom: 30,
 		shadowOpacity: 85,
-		width: 290,
-		height: 95,
+		width: 260,
+		height: 75,
 		borderColor: '#e6e5e5ff',
-		padding : 8.5
+		padding : 5
 	},
 	itemText:{
-		fontSize: 15,
+		fontSize: 10,
 		color: '#fff',
 		letterSpacing: 0.25,
 		fontWeight:'600',
