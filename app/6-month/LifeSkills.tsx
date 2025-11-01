@@ -27,23 +27,20 @@ export default function LifeSkills() {
       id: 'LS-003',
       courseName: 'Life Skills',
       duration: '6 months',
-      price: 1200,
+      price: 1500,
     };
     addEntry(newEntry);
   };
   return (
     <ScrollView>
     <View>
-<Text
-      style= {styles.infoBar}
+      <Text style= {styles.infoBar}
+      
+        >
+  
+      price: 1500,
 
->
-        id: LS-003,
-      courseName: LifeSkills,
-      duration: '6 months',
-      price: 1200,
-
-</Text>
+      </Text>
 
     <View style={styles.container}>
 <LinearGradient
@@ -210,11 +207,11 @@ const styles = StyleSheet.create({
        fontWeight: '500',
         fontSize: 12,
       margin: 20,
-      padding: 5,width: 150,
+      padding: 5,width: 100,
       lineHeight: 20,
-      height: 190,  
+      height: 40,  
       backgroundColor: '#1b91e0ff',
-      borderWidth: 6
+      borderWidth: 0
 
  },
  backButton:{ 

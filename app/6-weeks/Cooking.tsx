@@ -27,7 +27,7 @@ export default function Cooking() {
       id: 'COOK-006',
       courseName: 'Cooking',
       duration: '6 weeks',
-      price: 1200,
+      price: 750,
     };
     addEntry(newEntry);
   };
@@ -38,10 +38,8 @@ export default function Cooking() {
              style= {styles.infoBar}
 
        >
-      id: GRDN-007,
-      courseName: Cooking,
-      duration: 6 weeks,
-      price: 1200,
+     
+      price: 750,
       </Text>
     <View style={styles.container}>
 <LinearGradient
@@ -59,9 +57,10 @@ export default function Cooking() {
 
      
       <Text style={styles.header1}>Course Description</Text>
-      <Text></Text>
-      <Text></Text>
-      <Text></Text>
+      <Text>This course provides the essential skills needed to prepare and cook nutritious family meals.</Text>
+      <Text>You’ll learn about nutritional requirements for a healthy body, the different types of proteins, carbohydrates, and vegetables, and how to plan balanced meals.
+</Text>
+      <Text>The program also covers tasty and nutritious recipes, as well as practical techniques for the preparation and cooking of meals, giving you the confidence to create meals that are both wholesome and enjoyable for the whole family.</Text>
       <Text></Text>
       <Text></Text>
       
@@ -211,11 +210,11 @@ const styles = StyleSheet.create({
        fontWeight: '500',
         fontSize: 12,
       margin: 20,
-      padding: 5,width: 150,
+      padding: 5,width: 100,
       lineHeight: 20,
-      height: 190,  
+      height: 40,  
       backgroundColor: '#1b91e0ff',
-      borderWidth: 6
+      borderWidth: 0
 
  },
  backButton:{ 

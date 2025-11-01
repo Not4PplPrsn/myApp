@@ -23,7 +23,7 @@ export default function LandScaping() {
       id: 'LANDSC-002',
       courseName: 'Land Scaping',
       duration: '6 months',
-      price: 1200,
+      price: 1500,
     };
     addEntry(newEntry);
   };
@@ -33,10 +33,8 @@ export default function LandScaping() {
       <Text style= {styles.infoBar}
       
         >
-              id: LANDSC-002,
-      courseName: Land Scaping,
-      duration: '6 months',
-      price: 1200,
+  
+      price: 1500,
 
       </Text>
     <View style={styles.container}>
@@ -202,11 +200,11 @@ const styles = StyleSheet.create({
        fontWeight: '500',
         fontSize: 12,
       margin: 20,
-      padding: 5,width: 150,
+      padding: 5,width: 100,
       lineHeight: 20,
-      height: 190,  
+      height: 40,  
       backgroundColor: '#1b91e0ff',
-      borderWidth: 6
+      borderWidth: 0
 
  },
  backButton:{ 

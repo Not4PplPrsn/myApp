@@ -33,7 +33,7 @@ export default function FirstAid() {
       id: 'FAID-001',
       courseName: 'First Aid',
       duration: '6 months',
-      price: 1200,
+      price: 1500,
     };
     addEntry(newEntry);
   };
@@ -44,14 +44,12 @@ export default function FirstAid() {
       
       <View
       >
-        <Text
-              style= {styles.infoBar}
-
+      <Text style= {styles.infoBar}
+      
         >
-      id: FAID-001,
-      courseName: First Aid,
-      duration: 6 months,
-      price: 1200,
+  
+      price: 1500,
+
       </Text>
     <View style={styles.container}>
 <LinearGradient
@@ -229,11 +227,11 @@ const styles = StyleSheet.create({
        fontWeight: '500',
         fontSize: 12,
       margin: 20,
-      padding: 5,width: 150,
+      padding: 5,width: 100,
       lineHeight: 20,
-      height: 190,  
+      height: 40,  
       backgroundColor: '#1b91e0ff',
-      borderWidth: 6
+      borderWidth: 0
 
  },
  backButton:{ 

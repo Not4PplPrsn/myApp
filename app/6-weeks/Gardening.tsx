@@ -23,7 +23,7 @@ export default function Gardening() {
       id: 'GRDN-007',
       courseName: 'Gardening',
       duration: '6 weeks',
-      price: 1200,
+      price: 750,
     };
     addEntry(newEntry);
   };
@@ -35,10 +35,8 @@ export default function Gardening() {
               style= {styles.infoBar}
 
         >
-      id: GRDN-007,
-      courseName: Gardening,
-      duration: 6 weeks,
-      price: 1200,</Text>
+        price: 750,
+        </Text>
       
     <View style={styles.container}>
 <LinearGradient
@@ -55,11 +53,11 @@ export default function Gardening() {
 />
 
       <Text style={styles.header1}>Course Description</Text>
-      <Text></Text>
-      <Text></Text>
-      <Text></Text>
-      <Text></Text>
-      <Text></Text>
+      <Text>This course provides the basic knowledge needed to care for a domestic garden.</Text>
+      <Text>You’ll learn about water restrictions and the watering requirements of indigenous and exotic plants, as well as techniques for pruning and propagating plants.</Text>
+      <Text>This course provides the basic knowledge needed to care for a domestic garden</Text>
+      <Text>You’ll learn about water restrictions and the watering requirements of indigenous and exotic plants, as well as techniques for pruning and propagating plants.</Text>
+      <Text>The program also covers planting techniques for different plant types, giving you the confidence to maintain a healthy, vibrant, and well-managed garden.</Text>
       <StatusBar style="auto" />
     </View>
     <View style = { styles.buttonsContainer}>
