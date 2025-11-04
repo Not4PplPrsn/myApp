@@ -56,11 +56,9 @@ export default function Sewing() {
 />
       <View>
         <Text style={styles.header1}>Course Description</Text>
-        <Text></Text>
-      <Text></Text>
-      <Text></Text>
-      <Text></Text>
-      <Text></Text>
+        <Text>This course provides the skills needed to offer garment alterations and create new clothing.</Text>
+      <Text>You’ll learn about different types of stitches, threading a sewing machine, and sewing buttons, zips, hems, and seams.</Text>
+      <Text>The program also covers garment alterations and designing and sewing new garments, giving you the confidence to provide professional tailoring and custom clothing services.</Text>
       </View>
       <StatusBar style="auto" />
     </View>

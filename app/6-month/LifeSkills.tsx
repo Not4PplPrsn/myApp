@@ -56,11 +56,10 @@ export default function LifeSkills() {
   end={{ x: 0.5, y: 1 }}
 />
 <Text style={styles.header1}>Course Description</Text> 
-      <Text></Text>
-      <Text></Text>
-      <Text></Text>
-      <Text></Text>
-      <Text></Text>
+      <Text>This course provides the skills needed to navigate basic life necessities.</Text>
+      <Text>You’ll learn how to open a bank account, understand basic labour law and your rights, and develop essential reading, writing, and numeric literacy.
+</Text>
+      <Text>The program equips you with practical knowledge and confidence to manage everyday tasks and responsibilities effectively.</Text>
 
      <StatusBar style="auto" />
     </View>

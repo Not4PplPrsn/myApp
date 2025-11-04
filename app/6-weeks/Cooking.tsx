@@ -61,8 +61,6 @@ export default function Cooking() {
       <Text>You’ll learn about nutritional requirements for a healthy body, the different types of proteins, carbohydrates, and vegetables, and how to plan balanced meals.
 </Text>
       <Text>The program also covers tasty and nutritious recipes, as well as practical techniques for the preparation and cooking of meals, giving you the confidence to create meals that are both wholesome and enjoyable for the whole family.</Text>
-      <Text></Text>
-      <Text></Text>
       
       <StatusBar style="auto" />
     </View>
