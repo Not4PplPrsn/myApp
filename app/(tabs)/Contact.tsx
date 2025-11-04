@@ -17,7 +17,7 @@ export default function Contacts() {
 
     >      
   <ImageBackground
-     source={require('../../assets/images/Contacts.jpg')}
+     source={require('../../assets/images/Contacts.jpg')}/** */
      style= {styles.background}
     
   >
