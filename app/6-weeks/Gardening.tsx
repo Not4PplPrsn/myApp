@@ -53,9 +53,9 @@ export default function Gardening() {
 />
 
       <Text style={styles.header1}>Course Description</Text>
-      <Text>This course provides the basic knowledge needed to care for a domestic garden.</Text>
-      <Text>You’ll learn about water restrictions and the watering requirements of indigenous and exotic plants, as well as techniques for pruning and propagating plants.</Text>
-      <Text>The program also covers planting techniques for different plant types, giving you the confidence to maintain a healthy, vibrant, and well-managed garden.</Text>
+      <Text  style={styles.text}>This course provides the basic knowledge needed to care for a domestic garden.</Text>
+      <Text  style={styles.text}>You’ll learn about water restrictions and the watering requirements of indigenous and exotic plants, as well as techniques for pruning and propagating plants.</Text>
+      <Text  style={styles.text}>The program also covers planting techniques for different plant types, giving you the confidence to maintain a healthy, vibrant, and well-managed garden.</Text>
       <StatusBar style="auto" />
     </View>
     <View style = { styles.buttonsContainer}>
@@ -85,7 +85,7 @@ export default function Gardening() {
     marginVertical: 36,
     marginInlineStart: 20
   }}
-  onPress={() => router.back()}
+  onPress={() => router.back()/*Will Return user back to the initial page from navigationi */}
 
 >
   <View  >
@@ -203,14 +203,13 @@ const styles = StyleSheet.create({
        fontWeight: '500',
         fontSize: 12,
       margin: 20,
-      padding: 5,width: 150,
+      padding: 5,width: 100,
       lineHeight: 20,
-      height: 190,  
+      height: 40,  
       backgroundColor: '#1b91e0ff',
-      borderWidth: 6
+      borderWidth: 0
 
- },
- backButton:{ 
+ }, backButton:{ 
   backgroundColor:'#f0ac2eff', 
   borderRadius: 20,
   marginInlineEnd: 10,

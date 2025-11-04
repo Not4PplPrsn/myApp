@@ -57,10 +57,10 @@ export default function Cooking() {
 
      
       <Text style={styles.header1}>Course Description</Text>
-      <Text>This course provides the essential skills needed to prepare and cook nutritious family meals.</Text>
-      <Text>You’ll learn about nutritional requirements for a healthy body, the different types of proteins, carbohydrates, and vegetables, and how to plan balanced meals.
+      <Text style={styles.text}>This course provides the essential skills needed to prepare and cook nutritious family meals.</Text>
+      <Text  style={styles.text}>You’ll learn about nutritional requirements for a healthy body, the different types of proteins, carbohydrates, and vegetables, and how to plan balanced meals.
 </Text>
-      <Text>The program also covers tasty and nutritious recipes, as well as practical techniques for the preparation and cooking of meals, giving you the confidence to create meals that are both wholesome and enjoyable for the whole family.</Text>
+      <Text  style={styles.text}>The program also covers tasty and nutritious recipes, as well as practical techniques for the preparation and cooking of meals, giving you the confidence to create meals that are both wholesome and enjoyable for the whole family.</Text>
       
       <StatusBar style="auto" />
     </View>

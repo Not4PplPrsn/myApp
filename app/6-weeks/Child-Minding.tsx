@@ -41,10 +41,6 @@ export default function ChildMinding() {
       price: 750,
       </Text>
     <View style={styles.container}>
-      <Text>This course provides the core skills needed to care for young children responsibly and effectively.</Text>
-      <Text>You’ll learn about the specific needs of babies from birth to six months, the growing needs of children from seven months to one year, and the care and guidance required for toddlers.
-</Text>
-      <Text>The program also introduces the use of educational toys to support learning and development, giving you the confidence to provide safe, nurturing, and age-appropriate care.</Text>
 <LinearGradient
   colors={['#0a8a30ff', '#043b04ff']}
   style={[ StyleSheet.absoluteFillObject,{
@@ -57,8 +53,14 @@ export default function ChildMinding() {
   start={{ x: 1, y: 0.2 }}
   end={{ x: 0.5, y: 1 }}
 />
+
       
       <Text style={styles.header1}>Course Description</Text>
+            <Text  style={styles.text}>This course provides the core skills needed to care for young children responsibly and effectively.</Text>
+      <Text  style={styles.text}>You’ll learn about the specific needs of babies from birth to six months, the growing needs of children from seven months to one year, and the care and guidance required for toddlers.
+</Text >
+      <Text  style={styles.text}>The program also introduces the use of educational toys to support learning and development, giving you the confidence to provide safe, nurturing, and age-appropriate care.</Text>
+
       <StatusBar style="auto" />
     </View>
     <View style = { styles.buttonsContainer}>

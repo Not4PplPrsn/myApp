@@ -51,9 +51,9 @@ export default function LandScaping() {
   end={{ x: 0.5, y: 1 }}
 />
       <Text style={styles.header1}>Course Description</Text>  
-      <Text>This course provides the skills needed to offer landscaping services for new and established gardens.</Text>
-      <Text>You’ll learn about indigenous and exotic plants and trees, as well as installing structures like fountains, benches, and built-in braais.</Text>
-      <Text>
+      <Text style={styles.text} >This course provides the skills needed to offer landscaping services for new and established gardens.</Text>
+      <Text  style={styles.text}>You’ll learn about indigenous and exotic plants and trees, as well as installing structures like fountains, benches, and built-in braais.</Text>
+      <Text  style={styles.text}>
           The program also covers balancing plants, plant aesthetics, and garden layouts, giving you the confidence to create and maintain attractive outdoor spaces.</Text>
     </View><StatusBar style="auto" />
     <View style = { styles.buttonsContainer}>
