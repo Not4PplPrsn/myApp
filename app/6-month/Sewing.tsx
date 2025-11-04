@@ -225,6 +225,10 @@ const styles = StyleSheet.create({
    flexDirection: 'row',
    alignItems: 'stretch',
    alignContent:'space-between'
+ },
+  imageStyle: {
+  width: 300,
+  height: 100
  }
 
 });

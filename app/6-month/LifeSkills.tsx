@@ -41,6 +41,11 @@ export default function LifeSkills() {
       price: 1500,
 
       </Text>
+      <View>
+         <Image source={require('../../assets/images/Life_skills1.jpg')}  style={styles.imageStyle}/>
+          <Image source={require('../../assets/images/lifeskillsP2.jpg')}  style={styles.imageStyle}/>
+
+      </View>
 
     <View style={styles.container}>
 <LinearGradient
@@ -226,6 +231,10 @@ const styles = StyleSheet.create({
    flexDirection: 'row',
    alignItems: 'stretch',
    alignContent:'space-between'
+ }, 
+ imageStyle: {
+  width: 300,
+  height: 100
  }
 
 });

@@ -23,8 +23,10 @@ The app also informs the user on what the course themselve will contain, when it
 ## Contents
 ### MainScreens
 #### Screen1
-This screen provide a brief overveiw of the business what it has to offer. Briefly explaines thte 
+This screen provide a brief overveiw of the business what it has to offer. Briefly explaines the each course and what it teaches.
+
 #### Screen2
+This screen 
 #### Screen3
 #### Screen4
 
@@ -38,13 +40,18 @@ This screen provide a brief overveiw of the business what it has to offer. Brief
 -  Editor : Stephen Daniel Botha
 
 ## Design aspects
-   #### color Scheme
+   #### Color Scheme
    #### Buttons
    #### Navigation
    #### Logo
 ## Links repo(s)
-   1. theMainRepo []
-   2. theSpaires []
+   1. theMainRepo [https://github.com/VCNMB/vcnmb-xhaw5112-2025-mobile-D-L-M-2003.git]
+
+## Team  v 
+   1. Leader : Louis Jacobus Louwrens 
+   2. Secretarry : David Luc Manley
+   3. Stephen Botha
+   4. Lutando Mhlalase
 
 ## References 
    Images 
