@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
     alignContent: 'center',
-    height: 1050,
+    height: 850,
     width: 320,
     borderWidth: 0.01,
     alignSelf: 'center',
