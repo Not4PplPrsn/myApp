@@ -34,7 +34,7 @@ export default function Contacts() {
       
       <Text style= { styles.header1}> Contacts</Text>
       <Text style= {styles.header2}
-      onPress={()=>Linking.openURL('')}> <Ionicons name='mail-open-outline'  size={25}  ></Ionicons>empoweringthenation@gmail.com</Text>      
+      > <Ionicons name='mail-open-outline'  size={25}  ></Ionicons>empoweringthenation@gmail.com</Text>      
       <Text style={styles.header2}> <Ionicons name='call-outline' size={20}/>0860 567 861</Text>
       <Text style={styles.header2}onPress={()=>Linking.openURL('https://maps.app.goo.gl/DUxdu1gCozZXsrFN6')}> <Ionicons name='locate-outline' size={20}/>23  Apple Street</Text>
 
