@@ -53,7 +53,7 @@ export default function RootLayout(props: any) {
   return (
     <Drawer
     screenOptions={{drawerType: 'front', headerShown: true,
-      drawerStyle: { width: 300,
+      drawerStyle: { width: 350,
         direction: 'ltr',
         backgroundColor: '#256e09ff',
         paddingTop: 5,
