@@ -16,7 +16,7 @@ export default function HomeScreen() {
 >
     <View >
           <ImageBackground
-    source={require('../../assets/images/women.jpg')}
+    source={require('../../assets/images/women.jpg')/**(Shvets, 2025) */}
     style={styles.background}>
     <View style={styles.container} >
       <LinearGradient
@@ -54,7 +54,7 @@ export default function HomeScreen() {
     function NextPag() {
     return(
       <ImageBackground
-      source= {require('../../assets/images/Cooking.jpg')}>
+      source= {require('../../assets/images/Cooking.jpg')/**(Hughes, 2025)*/}>
         <View>
         <View style= {styles.container2}>
       <LinearGradient
@@ -71,15 +71,14 @@ We specialize in two types of courses – short-term 6-week programs and more in
 <Text style = {styles.header2}>
   Our 6-Week Courses:
 </Text>
-<Text style= {styles.text}> 
-If you’re looking to gain useful, hands-on knowledge in a short time, our 6-week courses are perfect for you. We offer:
-
-Child Minding – Learn how to care for and understand children, whether for personal growth or professional childcare opportunities.
-
-Cooking – Develop practical culinary skills and unlock your inner chef, with inspiration from the likes of Jamie Oliver.
-
-Gardening – Strengthen your green thumb as you learn the essentials of growing and maintaining plants successfully.
+<Text style= {styles.text}>If you’re looking to gain useful, hands-on knowledge in a short time, our 6-week courses are perfect for you. We offer:
+ </Text>
+<Text style= {styles.text}> Child Minding – Learn how to care for and understand children, whether for personal growth or professional childcare opportunities.
 </Text>
+<Text style= {styles.text}> Cooking – Develop practical culinary skills and unlock your inner chef, with inspiration from the likes of Jamie Oliver. </Text>
+<Text style= {styles.text}>Gardening – Strengthen your green thumb as you learn the essentials of growing and maintaining plants successfully.
+ </Text>
+
 
 
 
@@ -95,7 +94,7 @@ Gardening – Strengthen your green thumb as you learn the essentials of growing
       return(
         
         <ImageBackground
-        source={require('../../assets/images/Office.jpg')}
+        source={require('../../assets/images/Office.jpg')/**(fauxels, 2025) */}
         >
         <View >
     <View style = {styles.container3}>
@@ -107,16 +106,16 @@ style={[StyleSheet.absoluteFill, { borderRadius: 20 }]}        start={{x:1, y:0.
       />
 
           <Text style={styles.header2}>Our 6-Month Courses:</Text>
-          <Text style = {styles.text}>For those who want to take their skills to the next level, our 6-month courses provide deeper training and recognized qualifications. We offer:
+          <Text style = {styles.text}>For those who want to take their skills to the next level, our 6-month courses provide deeper training and recognized qualifications. We offer: </Text>
             <Text style = {styles.text}>First Aid – Gain a qualification that enables you to respond to emergencies and provide life-saving assistance.</Text>
             <Text style = {styles.text}>Sewing – Master the art of making, repairing, and tailoring clothing with creativity and precision.</Text>
-            <Text style= {{ marginBlock: 240}}>Landscaping – Learn how to transform outdoor spaces, designing and maintaining natural, beautiful environments.
+            <Text style= {styles.text}>Landscaping – Learn how to transform outdoor spaces, designing and maintaining natural, beautiful environments.
 </Text>
-            <Text style= {{ marginBlock: 240}}>Life Skills – Build confidence and communication skills to interact more effectively in both personal and professional settings.</Text>
+            <Text style= {styles.text}>Life Skills – Build confidence and communication skills to interact more effectively in both personal and professional settings.</Text>
             <Text></Text>
 
           
-        </Text>
+       
         
         </View></View></ImageBackground>
       );
@@ -198,7 +197,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
     alignContent: 'center',
-    height: 750,
+    height: 1050,
     width: 320,
     borderWidth: 0.01,
     alignSelf: 'center',

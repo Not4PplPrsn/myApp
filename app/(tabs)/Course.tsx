@@ -18,7 +18,7 @@ export default function Information() {
 
   >
     <ImageBackground
-    source={require('../../assets/images/Teaching.jpg')}
+    source={require('../../assets/images/Teaching.jpg')}/**(Miroshnichenko, 2025) */
     >
     <View style={styles.container}>
       <LinearGradient
@@ -87,11 +87,12 @@ function LinksToTheCourses(){
 
   return(
               <ImageBackground
-    source={require('../../assets/images/6MonthCourses.jpg')}
+    source={require('../../assets/images/6MonthCourses.jpg')/**
+(Pixabay, 2025)
+ */}
     >
 
-    <View>
-
+    <View> {/**The buttons for to navigate to the courses */}
       <Text style={styles.header1ForPage2}> Courses</Text>
 
       <View style= {{alignItems: 'center', }}>

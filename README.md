@@ -33,10 +33,13 @@
 
 ## References 
    Images 
-- 
-- 
-- 
-- 
+- Miroshnichenko, T., 2025. Photo by Tima Miroshnichenko on Pexels. [online] Pexels. Available at: <https://www.pexels.com/photo/teacher-teaching-students-about-geography-using-a-globe-5428267/> [Accessed 4 November 2025].
+
+- Soltani, A., 2025. Photo by Alireza Soltani on Pexels. [online] Pexels. Available at: <https://www.pexels.com/photo/colorful-navigational-signages-3600096/> [Accessed 4 November 2025]. 
+
+- Pixabay, 2025. Photo by Pixabay on Pexels. [online] Pexels. Available at: <https://www.pexels.com/photo/gold-and-silver-scissor-461035/> [Accessed 4 November 2025].
+
+- Channel Partner. n.d. AdobeStock_449736488-scaled-1-1536x864.jpg (1536×864). Available at: <https://www.channelpartner.es/wp-content/uploads/2025/06/AdobeStock_449736488-scaled-1-1536x864.jpg> [Accessed 4 November 2025]. 
 - 
 - 
 - 

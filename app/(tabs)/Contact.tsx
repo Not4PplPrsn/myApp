@@ -17,7 +17,7 @@ export default function Contacts() {
 
     >      
   <ImageBackground
-     source={require('../../assets/images/Contacts.jpg')}/** */
+     source={require('../../assets/images/Contacts.jpg')}/** (Soltani, 2025)*/
      style= {styles.background}
     
   >
@@ -95,11 +95,11 @@ function OtherVenues(){
       <View style={styles.mapsScreens}>
       <TouchableOpacity
       activeOpacity={1.7} 
-      onPress={()=>Linking.openURL('https://maps.app.goo.gl/nFNcgWiYsWVYSkuG6')}
+      onPress={()=>Linking.openURL('https://maps.app.goo.gl/nFNcgWiYsWVYSkuG6')/**(Channel Partner., n.d.) */}
       >
 
        <Image
-      source={require('../../assets/images/DOT.jpg')}
+      source={require('../../assets/images/DOT.jpg') /**(Channel Partner., n.d.) */}
       style={styles.images}/>
       </TouchableOpacity>
         <Text style= {styles.captions}>Living Room  jozi</Text>
@@ -109,11 +109,11 @@ function OtherVenues(){
       <View style= { styles.mapsScreens}>
     <TouchableOpacity
     activeOpacity={0.7} 
-    onPress={()=>Linking.openURL('https://maps.app.goo.gl/8vZDUscJRTcUehgJ9')}
+    onPress={()=>Linking.openURL('https://maps.app.goo.gl/8vZDUscJRTcUehgJ9')/**(Channel Partner., n.d.) */}
     >
 
               <Image
-      source={require('../../assets/images/DOT.jpg')}
+      source={require('../../assets/images/DOT.jpg')/**(Channel Partner., n.d.) */}
       style={styles.images}/>
     </TouchableOpacity>
 
