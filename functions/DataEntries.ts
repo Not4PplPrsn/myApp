@@ -35,7 +35,7 @@ export const useEntries = create<EntryStore>((set, get) /*This is how the datat 
     const updatedEntries = currentEntries.filter(entry => entry.id !== id);
     set({ entries: updatedEntries });
   },
-    getTotal: () => {
+    getTotal: () => {//Adds the discount and calculates what discount the user should get
     const entries = get().entries;
     const total = entries.reduce((sum, entry) => sum + entry.price, 0);
 
@@ -45,7 +45,7 @@ export const useEntries = create<EntryStore>((set, get) /*This is how the datat 
     if (entries.length > 3) discount = 0.15;
 
     return total - total * discount;
-  },
+  },/**/
 
   
 }));
