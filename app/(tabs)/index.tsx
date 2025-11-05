@@ -59,7 +59,8 @@ export default function HomeScreen() {
         <View style= {styles.container2}>
       <LinearGradient
         colors={['#0a8a30ff', '#043b04ff']}
-style={[StyleSheet.absoluteFill, { borderRadius: 20 }]}        start={{x:1, y:0.2}}
+style={[StyleSheet.absoluteFill, { borderRadius: 20 }]}        
+        start={{x:1, y:0.2}}
         end={{x:0.5, y:1}}
       />
       <Text style= {styles.header1}>About Empower the Nation</Text>

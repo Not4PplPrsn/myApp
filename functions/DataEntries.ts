@@ -1,4 +1,4 @@
-import { create } from 'zustand';// This function allow for the add button to work and tranfer th information to the calculate screen 
+import { create } from 'zustand';// This function allow for the add button to work and tranfer the information to the calculate screen 
 
 type CourseEntry = {
   id: string;
