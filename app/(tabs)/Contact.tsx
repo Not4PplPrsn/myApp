@@ -5,7 +5,6 @@ import React from 'react';
 import { Image, ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 
-
 export default function Contacts() {
   return (
     <ScrollView
