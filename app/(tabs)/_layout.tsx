@@ -1,7 +1,9 @@
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { Entypo, Ionicons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-import React from 'react';
+import React, { useState, useRef, useEffect, createContext } from 'react';
+
+
 
 export default function TabLayout() {
 
